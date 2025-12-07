@@ -1,0 +1,42 @@
+# Grading configuration for Lab 2.3: Skills System
+
+assignment:
+  id: L2.3-skills
+  name: "Lab 2.3: Skills System"
+  level: 2
+  type: lab
+  passing_score: 70
+
+checks:
+  - id: instantiate
+    name: "Agent Instantiation"
+    points: 25
+    type: instantiate
+    file: solution/agent.py
+  - id: swml_valid
+    name: "SWML Generation"
+    points: 25
+    type: swml_valid
+    file: solution/agent.py
+  - id: has_datetime
+    name: "DateTime Skill Loaded"
+    points: 50
+    type: swml_contains
+    file: solution/agent.py
+    require:
+      - text: "datetime"
+
+feedback:
+  pass: |
+    Excellent work! You've completed Lab 2.3: Skills System.
+
+    **Next steps:**
+    - Review the concepts covered
+    - Continue to the next lab
+
+  fail: |
+    Some checks didn't pass. Review the requirements and try again.
+
+    **Tips:**
+    - Run `swaig-test solution/agent.py --list-tools` to verify functions
+    - Run `swaig-test solution/agent.py --dump-swml` to check SWML
