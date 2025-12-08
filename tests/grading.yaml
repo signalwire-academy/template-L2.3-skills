@@ -24,7 +24,7 @@ checks:
     type: swml_contains
     file: solution/agent.py
     require:
-      - text: "datetime"
+      - text: "get_current_time"
 
 feedback:
   pass: |
